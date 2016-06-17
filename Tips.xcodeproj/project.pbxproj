@@ -12,6 +12,7 @@
 		93F2F3321D1143D400C2AC31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F2F3301D1143D400C2AC31 /* Main.storyboard */; };
 		93F2F3341D1143D400C2AC31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93F2F3331D1143D400C2AC31 /* Assets.xcassets */; };
 		93F2F3371D1143D400C2AC31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F2F3351D1143D400C2AC31 /* LaunchScreen.storyboard */; };
+		93F2F33F1D13C0EB00C2AC31 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 93F2F33E1D13C0EB00C2AC31 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		93F2F3331D1143D400C2AC31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93F2F3361D1143D400C2AC31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93F2F3381D1143D400C2AC31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F2F33E1D13C0EB00C2AC31 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				93F2F32C1D1143D400C2AC31 /* AppDelegate.swift */,
 				93F2F32E1D1143D400C2AC31 /* ViewController.swift */,
 				93F2F3301D1143D400C2AC31 /* Main.storyboard */,
+				93F2F33E1D13C0EB00C2AC31 /* Settings.bundle */,
 				93F2F3331D1143D400C2AC31 /* Assets.xcassets */,
 				93F2F3351D1143D400C2AC31 /* LaunchScreen.storyboard */,
 				93F2F3381D1143D400C2AC31 /* Info.plist */,
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F2F33F1D13C0EB00C2AC31 /* Settings.bundle in Resources */,
 				93F2F3371D1143D400C2AC31 /* LaunchScreen.storyboard in Resources */,
 				93F2F3341D1143D400C2AC31 /* Assets.xcassets in Resources */,
 				93F2F3321D1143D400C2AC31 /* Main.storyboard in Resources */,
@@ -250,6 +254,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -261,6 +266,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Tips/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.Tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";

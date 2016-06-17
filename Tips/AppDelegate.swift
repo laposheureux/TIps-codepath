@@ -3,7 +3,7 @@
 //  Tips
 //
 //  Created by Aaron on 6/15/16.
-//  Copyright © 2016 codepath. All rights reserved.
+//  Copyright © 2016 Aaron L'Heureux. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

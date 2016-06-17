@@ -1,25 +1,190 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="KfG-A8-3rZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Gdi-Wg-hD7">
+            <objects>
+                <navigationController navigationBarHidden="YES" toolbarHidden="NO" id="KfG-A8-3rZ" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LKW-T9-nfL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="bGa-KP-NZp">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MNb-k1-0rF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bif-NE-RfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="210"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
+                <viewController modalPresentationStyle="currentContext" id="BYZ-38-t0r" customClass="ViewController" customModule="Tips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9pG-52-HHM">
+                                <rect key="frame" x="20" y="238" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" id="fXE-r3-FG0">
+                                <rect key="frame" x="85" y="238" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mes-al-tf2">
+                                <rect key="frame" x="20" y="278" width="57" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="cHn-ov-xWU">
+                                <rect key="frame" x="85" y="278" width="215" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="m4z-4f-sYE">
+                                <rect key="frame" x="0.0" y="157" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="24" clearButtonMode="whileEditing" id="tL6-yX-HJJ">
+                                <rect key="frame" x="85" y="37" width="215" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="1Az-FZ-uea"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="6Nb-VX-7q0">
+                                <rect key="frame" x="20" y="185" width="280" height="29"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="tipValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="EDQ-lQ-HBQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <stepper opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" id="raa-kT-45v">
+                                <rect key="frame" x="206" y="362" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSplit:" destination="BYZ-38-t0r" eventType="valueChanged" id="kHl-mU-myw"/>
+                                </connections>
+                            </stepper>
+                            <view alpha="0.0" contentMode="scaleToFill" id="E3q-nv-Z9G">
+                                <rect key="frame" x="0.0" y="332" width="320" height="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uIO-bR-gHj">
+                                <rect key="frame" x="20" y="366" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Evu-k9-j3w">
+                                <rect key="frame" x="85" y="366" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Per Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CU1-Ma-3cF">
+                                <rect key="frame" x="20" y="414" width="124" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" id="XHE-pE-lsU">
+                                <rect key="frame" x="152" y="414" width="148" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yV7-bq-wmc">
+                                <rect key="frame" x="20" y="74" width="53" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.91841317703259873" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="iqV-aE-QZa" appends="YES" id="S6Q-2M-ygB"/>
+                        </connections>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Reset" id="0Jy-tc-UTA">
+                            <connections>
+                                <action selector="resetEverything:" destination="BYZ-38-t0r" id="CbG-hQ-mkx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fGM-r7-TT2"/>
+                        <barButtonItem title="Ask Friends for Money" id="eiP-Fd-Ze0">
+                            <connections>
+                                <action selector="nagFriends:" destination="BYZ-38-t0r" id="Cm1-Ra-RvO"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="8zM-g4-yeD"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="billField" destination="tL6-yX-HJJ" id="9gr-Tl-Kdz"/>
+                        <outlet property="nagFriendsButton" destination="eiP-Fd-Ze0" id="Gut-qX-wr3"/>
+                        <outlet property="numberOfPeople" destination="Evu-k9-j3w" id="0Hp-By-iXK"/>
+                        <outlet property="peopleStepper" destination="raa-kT-45v" id="zG5-mh-Ry2"/>
+                        <outlet property="perPersonLabel" destination="CU1-Ma-3cF" id="oGL-Nl-ZBs"/>
+                        <outlet property="perPersonTotal" destination="XHE-pE-lsU" id="6UD-Bg-Ecs"/>
+                        <outlet property="splitByLabel" destination="uIO-bR-gHj" id="jTR-j7-F0E"/>
+                        <outlet property="splitDivider" destination="E3q-nv-Z9G" id="vpM-uU-rDC"/>
+                        <outlet property="tipControl" destination="6Nb-VX-7q0" id="Ute-Ia-FxJ"/>
+                        <outlet property="tipLabel" destination="fXE-r3-FG0" id="9ao-Xa-RJU"/>
+                        <outlet property="totalLabel" destination="cHn-ov-xWU" id="LGR-zV-42O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="iqV-aE-QZa">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="uK2-wX-Ogi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-257" y="210"/>
         </scene>
     </scenes>
 </document>

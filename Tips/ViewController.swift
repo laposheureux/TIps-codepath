@@ -38,6 +38,8 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         return formatter
     }()
     
+    // MARK: View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         billField.placeholder = currencyFormatter.stringFromNumber(0)
@@ -60,14 +62,17 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     }
     
     func willResignActive() {
+        saveCurrentState()
+    }
+    
+    // MARK: Helpers
+    
+    func saveCurrentState() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(tipControl.selectedSegmentIndex, forKey: "lastTipPercentage")
         defaults.setObject(NSDate(), forKey: "lastDate")
-        if let billFieldText = billField.text {
-            defaults.setObject(billFieldText, forKey: "lastBillAmount")
-        } else {
-            defaults.setNilValueForKey("lastBillAmount")
-        }
+        defaults.setDouble(rawBillAmount, forKey: "lastBillAmount")
+        defaults.setDouble(peopleStepper.value, forKey: "lastPeopleCount")
     }
     
     func maybeRestorePreviousState() {
@@ -75,9 +80,11 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         if let lastDate = defaults.objectForKey("lastDate") as? NSDate {
             if lastDate.timeIntervalSinceNow <= 600 {
                 let lastTipPercentage = defaults.integerForKey("lastTipPercentage")
-                let lastBillAmount = defaults.objectForKey("lastBillAmount") as! String?
+                let lastBillAmount = defaults.doubleForKey("lastBillAmount")
+                let lastPeopleCount = defaults.doubleForKey("lastPeopleCount")
                 tipControl.selectedSegmentIndex = lastTipPercentage
-                billField.text = lastBillAmount
+                billField.text = lastBillAmount.description
+                peopleStepper.value = lastPeopleCount
             } else {
                 tipControl.selectedSegmentIndex = defaults.integerForKey("defaultTipPercentage")
                 billField.text = nil
@@ -97,6 +104,8 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         totalLabel.text = currencyFormatter.stringFromNumber(total)
         unformattedTotal = total
     }
+    
+    // MARK: Actions from view controller
 
     @IBAction func onEditingChanged(sender: UITextField) {
         if let billFieldText = billField.text, billAmount = Double(billFieldText) {
@@ -145,6 +154,9 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         onEditingChanged(billField)
         
     }
+    
+    // MARK: UITextFieldDelegate
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         if splitDivider.alpha > 0 {
             UIView.animateWithDuration(0.35, delay: 0.0, options: .BeginFromCurrentState, animations: { () -> Void in
@@ -192,6 +204,8 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         }
         billField.text = currencyFormatter.stringFromNumber(rawBillAmount)
     }
+    
+    // MARK: MFMessageComposeViewControllerDelegate
     
     func messageComposeViewController(controller: MFMessageComposeViewController, didFinishWithResult result: MessageComposeResult) {
         controller.dismissViewControllerAnimated(true, completion: nil)

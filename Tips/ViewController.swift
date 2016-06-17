@@ -73,6 +73,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         defaults.setObject(NSDate(), forKey: "lastDate")
         defaults.setDouble(rawBillAmount, forKey: "lastBillAmount")
         defaults.setDouble(peopleStepper.value, forKey: "lastPeopleCount")
+        defaults.synchronize()
     }
     
     func maybeRestorePreviousState() {

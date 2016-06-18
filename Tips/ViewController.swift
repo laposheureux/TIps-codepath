@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     
     func willEnterForeground() {
         maybeRestorePreviousState()
+        nagFriendsButton.enabled = MFMessageComposeViewController.canSendText()
     }
     
     func willResignActive() {

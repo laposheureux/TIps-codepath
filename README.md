@@ -23,13 +23,20 @@ Completed:
 * [x] Extra: Send message to friends with amount per person
 * [x] Extra: Layout remains consistent from smaller to larger phones
 
-![Video Walkthrough](name of your gif file.gif)
 ## Walkthroughs
 
 1. [iPhone 5s Simulator] Main features including tip calculation, US locale formatting, first responder, splitting the bill, animating the split content in and out with the presence and absense of the keyboard, reset option, and persistence after app close
 
-2. [iPhone 5s Simulator] Settings bundle and seeing the default reflected when opening the app that had been freshly installed
+  ![Main Features](Main Features.gif)
 
-3. [iPhone 5s Simulator] Local differences when device is set to United Kingdom.
+2. [iPhone 5s Simulator] Settings bundle and seeing the default reflected when opening the app that had been freshly installed
+ 
+  ![Settings](Settings.gif)
+
+3. [iPhone 5s Simulator] Locale differences when device is set to United Kingdom.
+
+  ![Locales](Locales.gif)
 
 4. [iPhone 6s Device] Appropriate layout with larger screen, messaging.
+
+  ![Message and Layout](Message and Layout.gif)

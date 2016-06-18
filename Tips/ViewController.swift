@@ -79,7 +79,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     func maybeRestorePreviousState() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let lastDate = defaults.objectForKey("lastDate") as? NSDate {
-            if lastDate.timeIntervalSinceNow <= 600 {
+            if lastDate.timeIntervalSinceNow >= -600 {
                 let lastTipPercentage = defaults.integerForKey("lastTipPercentage")
                 let lastBillAmount = defaults.doubleForKey("lastBillAmount")
                 let lastPeopleCount = defaults.doubleForKey("lastPeopleCount")

@@ -1,8 +1,14 @@
-# TipCalculator
+# Tips
 
 This is a Tip Calculator application for iOS submitted as the [pre-assignment](https://gist.github.com/timothy1ee/7747214) requirement for CodePath.
 
-Time spent: 4.5 hours
+## Description
+
+The tip calculator can split for an arbitrary number of other people and supports four tip percentages with defaults in a settings bundle. When you've calculated your split, assuming your device supports messaging, you can pop up a message to send with the individual split amount.
+
+## Codepath Details
+
+Time spent: 5 hours
 
 Completed:
 
@@ -15,6 +21,15 @@ Completed:
 * [x] Extra: Reset all input and revert to default tip percentage
 * [x] Extra: Total splittable by arbitrary amount of people
 * [x] Extra: Send message to friends with amount per person
-
+* [x] Extra: Layout remains consistent from smaller to larger phones
 
 ![Video Walkthrough](name of your gif file.gif)
+## Walkthroughs
+
+1. [iPhone 5s Simulator] Main features including tip calculation, US locale formatting, first responder, splitting the bill, animating the split content in and out with the presence and absense of the keyboard, reset option, and persistence after app close
+
+2. [iPhone 5s Simulator] Settings bundle and seeing the default reflected when opening the app that had been freshly installed
+
+3. [iPhone 5s Simulator] Local differences when device is set to United Kingdom.
+
+4. [iPhone 6s Device] Appropriate layout with larger screen, messaging.

@@ -33,10 +33,14 @@ Completed:
  
   ![Settings](Settings.gif)
 
-3. [iPhone 5s Simulator] Locale differences when device is set to United Kingdom.
+3. [iPhon 5s Simulator] Settings View Controller changes and showing that they are in sync with the Settings bundle.
+
+  ![Settings Sync](New Settings.gif)
+
+4. [iPhone 5s Simulator] Locale differences when device is set to United Kingdom.
 
   ![Locales](Locales.gif)
 
-4. [iPhone 6s Device] Appropriate layout with larger screen, messaging.
+5. [iPhone 6s Device] Appropriate layout with larger screen, messaging.
 
   ![Message and Layout](Message and Layout.gif)

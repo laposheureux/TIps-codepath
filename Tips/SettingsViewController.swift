@@ -19,5 +19,6 @@ class SettingsViewController: UIViewController {
     @IBAction func changeDefaultTip(sender: UISegmentedControl) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipPercentage.selectedSegmentIndex, forKey: "defaultTipPercentage")
+        defaults.synchronize()
     }
 }

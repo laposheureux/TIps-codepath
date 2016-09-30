@@ -22,6 +22,7 @@ Completed:
 * [x] Extra: Total splittable by arbitrary amount of people
 * [x] Extra: Send message to friends with amount per person
 * [x] Extra: Layout remains consistent from smaller to larger phones
+* [x] Extra: Settings bundle for integration into Settings.app
 
 ## Walkthroughs
 

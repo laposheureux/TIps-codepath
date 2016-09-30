@@ -21,7 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     @IBOutlet weak var perPersonTotal: UILabel!
     @IBOutlet weak var numberOfPeople: UILabel!
     @IBOutlet weak var peopleStepper: UIStepper!
-    @IBOutlet weak var nagFriendsButton: UIBarButtonItem!
     
     var unformattedTotal = 0.0
     var rawBillAmount = 0.0
@@ -42,11 +41,9 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         billField.placeholder = currencyFormatter.stringFromNumber(0)
         billField.delegate = self
-        if !MFMessageComposeViewController.canSendText() {
-            nagFriendsButton.enabled = false
-        }
         maybeRestorePreviousState()
         billField.becomeFirstResponder()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(willEnterForeground), name: UIApplicationWillEnterForegroundNotification, object: nil)
@@ -59,7 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
     
     func willEnterForeground() {
         maybeRestorePreviousState()
-        nagFriendsButton.enabled = MFMessageComposeViewController.canSendText()
     }
     
     func willResignActive() {
@@ -137,7 +133,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         view.endEditing(true)
     }
     
-    @IBAction func nagFriends(sender: UIBarButtonItem) {
+    func nagFriends(sender: UIBarButtonItem) {
         guard let share = perPersonTotal.text else {
             return
         }
@@ -147,7 +143,7 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         presentViewController(messageViewController, animated: true, completion: nil)
     }
     
-    @IBAction func resetEverything(sender: UIBarButtonItem) {
+    func resetEverything(sender: UIBarButtonItem) {
         let defaults = NSUserDefaults.standardUserDefaults()
         tipControl.selectedSegmentIndex = defaults.integerForKey("defaultTipPercentage")
         billField.text = nil
@@ -163,17 +159,17 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         if splitDivider.alpha > 0 {
             UIView.animateWithDuration(0.35, delay: 0.0, options: .BeginFromCurrentState, animations: { () -> Void in
                 self.splitDivider.alpha = 0
-                self.splitDivider.frame.origin.y = 382
+                self.splitDivider.frame.origin.y = 335
                 self.splitByLabel.alpha = 0
-                self.splitByLabel.frame.origin.y = 401
+                self.splitByLabel.frame.origin.y = 354
                 self.perPersonLabel.alpha = 0
-                self.perPersonLabel.frame.origin.y = 444
+                self.perPersonLabel.frame.origin.y = 397
                 self.perPersonTotal.alpha = 0
-                self.perPersonTotal.frame.origin.y = 444
+                self.perPersonTotal.frame.origin.y = 397
                 self.numberOfPeople.alpha = 0
-                self.numberOfPeople.frame.origin.y = 401
+                self.numberOfPeople.frame.origin.y = 354
                 self.peopleStepper.alpha = 0
-                self.peopleStepper.frame.origin.y = 397
+                self.peopleStepper.frame.origin.y = 350
             }, completion: nil)
         }
         
@@ -191,17 +187,17 @@ class ViewController: UIViewController, UITextFieldDelegate, MFMessageComposeVie
         if splitDivider.alpha < 1 {
             UIView.animateWithDuration(0.35, delay: 0.0, options: .BeginFromCurrentState, animations: { () -> Void in
                 self.splitDivider.alpha = 1
-                self.splitDivider.frame.origin.y = 332
+                self.splitDivider.frame.origin.y = 285
                 self.splitByLabel.alpha = 1
-                self.splitByLabel.frame.origin.y = 361
+                self.splitByLabel.frame.origin.y = 314
                 self.perPersonLabel.alpha = 1
-                self.perPersonLabel.frame.origin.y = 404
+                self.perPersonLabel.frame.origin.y = 357
                 self.perPersonTotal.alpha = 1
-                self.perPersonTotal.frame.origin.y = 404
+                self.perPersonTotal.frame.origin.y = 357
                 self.numberOfPeople.alpha = 1
-                self.numberOfPeople.frame.origin.y = 361
+                self.numberOfPeople.frame.origin.y = 314
                 self.peopleStepper.alpha = 1
-                self.peopleStepper.frame.origin.y = 357
+                self.peopleStepper.frame.origin.y = 310
                 }, completion: nil)
         }
         billField.text = currencyFormatter.stringFromNumber(rawBillAmount)
